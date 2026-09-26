@@ -1,0 +1,99 @@
+{
+  "cpu_scheduling": {
+  "processes": [
+    {"pid": 1, "name": "p1", "priority": 3, "state": "NEW", "cpu": 0, "pc": 0},
+    {"pid": 2, "name": "p2", "priority": 4, "state": "TERMINATED", "cpu": 2, "pc": 4},
+    {"pid": 3, "name": "p3", "priority": 2, "state": "NEW", "cpu": 0, "pc": 0},
+    {"pid": 4, "name": "p4", "priority": 2, "state": "NEW", "cpu": 0, "pc": 0}
+  ]
+},
+  "scheduling_FCFS": {
+  "processes": [
+    {"pid": 1, "name": "shell", "priority": 5, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 2, "name": "editor", "priority": 3, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 3, "name": "iod", "priority": 9, "state": "TERMINATED", "cpu": 2, "pc": 4}
+  ]
+},
+  "scheduling_SJF": {
+  "processes": [
+    {"pid": 1, "name": "shell", "priority": 5, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 2, "name": "editor", "priority": 3, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 3, "name": "iod", "priority": 9, "state": "TERMINATED", "cpu": 2, "pc": 4}
+  ]
+},
+  "scheduling_Priority": {
+  "processes": [
+    {"pid": 1, "name": "shell", "priority": 5, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 2, "name": "editor", "priority": 3, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 3, "name": "iod", "priority": 9, "state": "TERMINATED", "cpu": 2, "pc": 4}
+  ]
+},
+  "scheduling_Round Robin": {
+  "processes": [
+    {"pid": 1, "name": "shell", "priority": 5, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 2, "name": "editor", "priority": 3, "state": "TERMINATED", "cpu": 3, "pc": 12},
+    {"pid": 3, "name": "iod", "priority": 9, "state": "TERMINATED", "cpu": 2, "pc": 4}
+  ]
+},
+  "paging_FIFO": {
+  "frames": [
+    {"frame": 0, "occupied": true, "pid": 1, "page": 4},
+    {"frame": 1, "occupied": true, "pid": 1, "page": 2},
+    {"frame": 2, "occupied": true, "pid": 1, "page": 3}
+  ],
+  "hits": 3,
+  "faults": 9
+},
+  "paging_LRU": {
+  "frames": [
+    {"frame": 0, "occupied": true, "pid": 1, "page": 2},
+    {"frame": 1, "occupied": true, "pid": 1, "page": 3},
+    {"frame": 2, "occupied": true, "pid": 1, "page": 4}
+  ],
+  "hits": 2,
+  "faults": 10
+},
+  "paging_Optimal": {
+  "frames": [
+    {"frame": 0, "occupied": true, "pid": 1, "page": 3},
+    {"frame": 1, "occupied": true, "pid": 1, "page": 1},
+    {"frame": 2, "occupied": true, "pid": 1, "page": 4}
+  ],
+  "hits": 5,
+  "faults": 7
+},
+  "disk_FCFS": {
+  "headPosition": 67,
+  "totalSeek": 643,
+  "queue": []
+},
+  "disk_SSTF": {
+  "headPosition": 183,
+  "totalSeek": 205,
+  "queue": []
+},
+  "disk_SCAN": {
+  "headPosition": 14,
+  "totalSeek": 302,
+  "queue": []
+},
+  "disk_C-SCAN": {
+  "headPosition": 37,
+  "totalSeek": 325,
+  "queue": []
+},
+  "banker": {
+  "available": [2, 3, 0],
+  "processes": [
+    {"pid": 0, "allocation": [0, 1, 0], "max": [7, 5, 3], "need": [7, 4, 3]},
+    {"pid": 1, "allocation": [3, 0, 2], "max": [3, 2, 2], "need": [0, 2, 0]},
+    {"pid": 2, "allocation": [3, 0, 2], "max": [9, 0, 2], "need": [6, 0, 0]},
+    {"pid": 3, "allocation": [2, 1, 1], "max": [2, 2, 2], "need": [0, 1, 1]},
+    {"pid": 4, "allocation": [0, 0, 2], "max": [4, 3, 3], "need": [4, 3, 1]}
+  ]
+},
+  "synchronization": {
+  "value": 10,
+  "waitingQueue": []
+}
+}
